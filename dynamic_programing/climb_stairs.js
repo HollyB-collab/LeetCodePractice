@@ -4,7 +4,17 @@
 //input: number of stairs
 //output: ways to climb the stairs
 
-//method 1 dynamically
-var climbStairs1 = function(n) {
+//method 1 fibonacci sequence
+//Fib(n) = Fib(n-1) + Fib(n-2)
+var climbStairs = function(n) {
+  var firstNum = 1;
+  var secondNum = 2;
 
+  if (n <= 2 ) return n;
+  for (var i = 3; i <= n; i++) {
+    var thirdNum = firstNum + secondNum;
+    firstNum = secondNum;
+    secondNum = thirdNum;
+  }
+  return secondNum;
 };
