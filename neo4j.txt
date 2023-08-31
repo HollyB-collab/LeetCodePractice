@@ -1,0 +1,8 @@
+Playing with neo4j
+
+issues: browser configuration settings affected the database import.
+fix: disable firewall for aura website.
+
+question: is a graph database also a relational database?
+answer: No, but that is counter intuitive.
+nuance: Graph databases store relationships as data relational databases reference relationships at runtume.
