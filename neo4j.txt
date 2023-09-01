@@ -6,3 +6,8 @@ fix: disable firewall for aura website.
 question: is a graph database also a relational database?
 answer: No, but that is counter intuitive.
 nuance: Graph databases store relationships as data relational databases reference relationships at runtume.
+
+create a person node with the property name: "Holly"
+CREATE (p:PERSON {name: 'Holly'})
+
+use create to create a node, use merge to add to an existing node
