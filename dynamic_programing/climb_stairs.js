@@ -10,7 +10,7 @@ var climbStairs = function(n) {
   var firstNum = 1;
   var secondNum = 2;
 
-  if (n <= 2 ) return n;
+  if (n <= 2) return n;
   for (var i = 3; i <= n; i++) {
     var thirdNum = firstNum + secondNum;
     firstNum = secondNum;
