@@ -15,3 +15,12 @@ var lengthOfLIS = function(nums) {
   }
   return Math.max(...maxLengthArray);
 };
+
+// tools used:
+// Array constructor will create a new array, if passed a number will create an array with that length.
+// Array.prototype.fill() will fill the array. if passed one number fill the array with that number
+//    if passed 3 numbers (0, 2, 4) will fill indices 2-4 with 0; (excluding final number).
+
+// Math.max() can pass numbers to this function and it will find the largest.
+//the spread opperator "Math.max(...maxLengthArray)" allows each object in the array to be passed as
+//  an individual parameter.
