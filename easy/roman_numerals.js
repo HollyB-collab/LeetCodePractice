@@ -21,5 +21,19 @@ var romanToInt = function(s) {
     CM: 900,
   };
  //break string up into contingent values
+  var numerals = s.split("");
+  var integers = [];
+  for (var i = 0; i < numerals.length; i ++) {
+    integers.push(numeralValues[numerals[i]]);
+  }
+  //check for cases where 4 or 9 exist
+  for (var j = 1; j < integers.length; j++) {
+    var firstInteger = j - 1;
+    var secondInteger = j;
+    if (firstInteger < secondInteger) {
+      secondInteger[0] - 1;
+      firstInteger = 0;
+    }
+  }
  //add values together
 };
