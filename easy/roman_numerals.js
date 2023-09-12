@@ -4,6 +4,7 @@
 //output: number
 
 var romanToInt = function(s) {
+  var result = 0;
  //create object that stores the numeral values
   var numeralValues = {
     I: 1,
@@ -13,12 +14,6 @@ var romanToInt = function(s) {
     C: 100,
     D: 500,
     M: 1000,
-    IV: 4,
-    IX: 9,
-    XL: 40,
-    XC: 90,
-    CD: 400,
-    CM: 900,
   };
  //break string up into contingent values
   var numerals = s.split("");
@@ -28,12 +23,18 @@ var romanToInt = function(s) {
   }
   //check for cases where 4 or 9 exist
   for (var j = 1; j < integers.length; j++) {
-    var firstInteger = j - 1;
-    var secondInteger = j;
+    var firstInteger = integers[j - 1];
+    var secondInteger = integers[j];
+
     if (firstInteger < secondInteger) {
-      secondInteger[0] - 1;
-      firstInteger = 0;
+      var secondLength = (secondInteger.toString(s)).length; //10
+      integers[j] = secondInteger - (10^secondLength);
+      integers[j-1] = 0;
     }
   }
  //add values together
+  for (var i = 0; i < integers.length; i ++) {
+    result = result + integers[i];
+  }
+  return result;
 };
