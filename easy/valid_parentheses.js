@@ -19,4 +19,8 @@ var isValid = function(s) {
     if (s[i] === "}" && storageObject["{"] > 1) storageObject["{"] -= 1;
     if (s[i] === "]" && storageObject["["] > 1) storageObject["["] -= 1;
   }
+  //run through storage object
+  for (var keys in storageObject) {
+    if (storageObject[keys] != 0) return false;
+  }
 };
